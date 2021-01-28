@@ -11,15 +11,21 @@ function displayWordSoFar(word, guesses) {
   const lettersInWordArray = word.split("");
   console.log("ARRAY OF LETTERS", lettersInWordArray);
   // - [x] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
+  let output = "";
   for (let index = 0; index < lettersInWordArray.length; index++) {
     const letterInWord = lettersInWordArray[index];
     console.log("1 LETTER OF WORD TO GUESS:", letterInWord);
     // - [x] checken: zit de letter in guesses?
     const isLetterGuessed = guesses.includes(letterInWord);
     console.log(letterInWord, "GERADEN?", isLetterGuessed);
+
+    // - [ ] if else
+    // - [x] zo nee: "_ "
+    if (!isLetterGuessed) {
+      output = output + "_ ";
+    }
   }
-  // - [ ] if else
-  // - [ ] zo nee: "_ "
+  console.log(output);
   // - [ ] zo ja: "j " (niet j, maar de letter die we dan checken)
   // - [ ] klaar? -> onze string die we hebben gemaakt returnen
 }
