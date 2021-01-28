@@ -27,7 +27,8 @@ function displayWordSoFar(word, guesses) {
   }
   console.log(output);
   // - [ ] zo ja: "j " (niet j, maar de letter die we dan checken)
-  // - [ ] klaar? -> onze string die we hebben gemaakt returnen
+  // - [x] klaar? -> onze string die we hebben gemaakt returnen
+  return output;
 }
 
 function isGameWon(word, guesses) {
