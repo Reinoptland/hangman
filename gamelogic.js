@@ -7,10 +7,14 @@ function displayWordSoFar(word, guesses) {
   // WOORD: javascript, GUESSES: [] -> "_ _ _ _ _ _ _ _ _ _ "
   // WOORD: javascript, GUESSES: ['a', 'b'] -> "_ a _ a _ _ _ _ _ _ "
 
-  // - [ ] javascript "splitten" split() -> ['j','a','v','a','s','c','r','i','p','t']
+  // - [x] javascript "splitten" split() -> ['j','a','v','a','s','c','r','i','p','t']
   const lettersInWordArray = word.split("");
   console.log("ARRAY OF LETTERS", lettersInWordArray);
-  // - [ ] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
+  // - [x] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
+  for (let index = 0; index < lettersInWordArray.length; index++) {
+    const letterInWord = lettersInWordArray[index];
+    console.log("1 LETTER OF WORD TO GUESS:", letterInWord);
+  }
   // - [ ] checken: zit de letter in guesses?
   // - [ ] if else
   // - [ ] zo nee: "_ "
