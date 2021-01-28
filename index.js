@@ -1,6 +1,7 @@
 const { question } = require("readline-sync");
+const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
 
-function game(guesses, woord) {
+function game(word, guesses) {
   console.log("Dit heb je tot nu toe geraden: ", guesses);
 
   const letter = question("Raad een letter: ");
@@ -9,7 +10,7 @@ function game(guesses, woord) {
   guesses.push(letter);
 
   // volgende ronde! we roepen game nog een keer aan
-  game(guesses, woord);
+  game(word, guesses);
 }
 
-game([], "javascript");
+game("javascript", []);
