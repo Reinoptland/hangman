@@ -14,8 +14,10 @@ function displayWordSoFar(word, guesses) {
   for (let index = 0; index < lettersInWordArray.length; index++) {
     const letterInWord = lettersInWordArray[index];
     console.log("1 LETTER OF WORD TO GUESS:", letterInWord);
+    // - [x] checken: zit de letter in guesses?
+    const isLetterGuessed = guesses.includes(letterInWord);
+    console.log(letterInWord, "GERADEN?", isLetterGuessed);
   }
-  // - [ ] checken: zit de letter in guesses?
   // - [ ] if else
   // - [ ] zo nee: "_ "
   // - [ ] zo ja: "j " (niet j, maar de letter die we dan checken)
