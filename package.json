@@ -1,13 +1,15 @@
 {
   "name": "hangman",
   "version": "1.0.0",
-  "description": "",
+  "description": "Let's build a game!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rein Op 't Land",
+  "license": "SEE LICENSE.MD",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
