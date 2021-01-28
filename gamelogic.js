@@ -1,7 +1,12 @@
 function displayWordSoFar(word, guesses) {
-  // - [ ] zet je testje op test.only (later weer weghalen)
-  // - [ ] loggen: wat is word, wat is guesses
-  // - [ ] javascript, ['a', 'b'] -> "_ _ _ _ _ _ _ _ _ _ "
+  // - [x] zet je testje op test.only (later weer weghalen)
+  // - [x] loggen: wat is word, wat is guesses
+  console.log("WOORD TE RADEN:", word);
+  console.log("GUESSES:", guesses);
+  // DOEL:
+  // WOORD: javascript, GUESSES: [] -> "_ _ _ _ _ _ _ _ _ _ "
+  // WOORD: javascript, GUESSES: ['a', 'b'] -> "_ a _ a _ _ _ _ _ _ "
+
   // - [ ] javascript "splitten" split() -> ['j','a','v','a','s','c','r','i','p','t']
   // - [ ] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
   // - [ ] checken: zit de letter in guesses?
