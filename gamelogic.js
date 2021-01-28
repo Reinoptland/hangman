@@ -24,9 +24,13 @@ function displayWordSoFar(word, guesses) {
     if (!isLetterGuessed) {
       output = output + "_ ";
     }
+
+    // - [x] zo ja: "j " (niet j, maar de letter die we dan checken)
+    if (isLetterGuessed) {
+      output = output + letterInWord + " ";
+    }
   }
   console.log(output);
-  // - [ ] zo ja: "j " (niet j, maar de letter die we dan checken)
   // - [x] klaar? -> onze string die we hebben gemaakt returnen
   return output;
 }
