@@ -3,6 +3,8 @@ const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
 
 function game(word, guesses) {
   console.log("Dit heb je tot nu toe geraden: ", guesses);
+  const wordSoFar = displayWordSoFar(word, guesses);
+  console.log(wordSoFar);
 
   const letter = question("Raad een letter: ");
 
