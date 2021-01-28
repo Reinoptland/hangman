@@ -69,5 +69,5 @@ test("isGameLost should return false if you've guessed less than 7 wrong letters
   const gameLost = isGameLost(word, guesses);
 
   // ASSERT
-  expect(gameLost).toBe(true);
+  expect(gameLost).toBe(false);
 });
