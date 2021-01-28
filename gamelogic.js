@@ -8,6 +8,8 @@ function displayWordSoFar(word, guesses) {
   // WOORD: javascript, GUESSES: ['a', 'b'] -> "_ a _ a _ _ _ _ _ _ "
 
   // - [ ] javascript "splitten" split() -> ['j','a','v','a','s','c','r','i','p','t']
+  const lettersInWordArray = word.split("");
+  console.log("ARRAY OF LETTERS", lettersInWordArray);
   // - [ ] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
   // - [ ] checken: zit de letter in guesses?
   // - [ ] if else
