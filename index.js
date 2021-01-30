@@ -10,7 +10,9 @@ const drawGallows = require("./gallows");
 function game(word, guesses) {
   console.log("Dit heb je tot nu toe geraden: ", guesses);
   const wordSoFar = displayWordSoFar(word, guesses);
-  console.log(wordSoFar);
+  console.log(`
+    ${wordSoFar}
+  `);
 
   // using keyIn to get one letter,
   // using limit to limit the options of the user
@@ -21,8 +23,12 @@ function game(word, guesses) {
     caseSensitive: true,
   });
 
-  // voeg de geraden letter toe aan de array met guesses
-  guesses.push(letter);
+  if (!guesses.includes(letter)) {
+    // voeg de geraden letter toe aan de array met guesses
+    guesses.push(letter);
+  } else {
+    console.log("Die letter had je al geprobeerd ... ");
+  }
 
   const gameWon = isGameWon(word, guesses);
   if (gameWon) {
