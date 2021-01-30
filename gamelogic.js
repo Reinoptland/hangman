@@ -35,6 +35,10 @@ function isGameLost(word, guesses) {
   console.log("INPUT", "WORD:", word, "GUESSES", guesses);
   let mistakeCount = 0;
   console.log("MISTAKE COUNT:", mistakeCount);
+  for (let index = 0; index < guesses.length; index++) {
+    const guess = guesses[index];
+    console.log("ONE GUESS IN LOOP:", guess);
+  }
 }
 
 module.exports = {
