@@ -44,6 +44,13 @@ function isGameLost(word, guesses) {
     }
     console.log("MISTAKE COUNT:", mistakeCount);
   }
+
+  const MAX_MISTAKE_COUNT = 7;
+  if (mistakeCount >= MAX_MISTAKE_COUNT) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = {
