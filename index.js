@@ -1,8 +1,14 @@
 const { keyIn } = require("readline-sync");
-const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
+const {
+  displayWordSoFar,
+  isGameWon,
+  isGameLost,
+  countMistakes,
+} = require("./gamelogic");
 
 function game(word, guesses) {
   console.log("Dit heb je tot nu toe geraden: ", guesses);
+  console.log(`Je mag nog ${7 - countMistakes(word, guesses)} fouten maken`);
   const wordSoFar = displayWordSoFar(word, guesses);
   console.log(wordSoFar);
 
