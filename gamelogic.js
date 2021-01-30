@@ -25,15 +25,13 @@ function isGameLost(word, guesses) {
 }
 
 function countMistakes(word, guesses) {
-  let mistakeCount = 0;
-  for (let index = 0; index < guesses.length; index++) {
-    const guess = guesses[index];
-    const isGuessCorrect = word.includes(guess);
-    if (!isGuessCorrect) {
-      mistakeCount = mistakeCount + 1;
+  return guesses.filter((guess) => {
+    if (!word.includes(guess)) {
+      return true; // this is letter is not guessed, count it
+    } else {
+      return false; // this letter was guessed, don't count it
     }
-  }
-  return mistakeCount;
+  }).length;
 }
 
 module.exports = {
