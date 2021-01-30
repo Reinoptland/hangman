@@ -6,17 +6,17 @@ function displayWordSoFar(word, guesses) {
 }
 
 function isGameWon(word, guesses) {
-  const lettersInWordArray = word.split("");
+  const letterNotGuessed = word
+    .split("") // // ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"]
+    .find((letter) => {
+      if (!guesses.includes(letter)) {
+        return true; // we found a letter not guessed, stop looking
+      } else {
+        return false; // this letter was guessed, keep going
+      }
+    });
 
-  for (let index = 0; index < lettersInWordArray.length; index++) {
-    const letterInWord = lettersInWordArray[index];
-    const letterGuessed = guesses.includes(letterInWord);
-    if (!letterGuessed) {
-      return false;
-    }
-  }
-
-  return true;
+  return letterNotGuessed === undefined; // if there is no letter not guessed, we won
 }
 
 function isGameLost(word, guesses) {
