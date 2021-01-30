@@ -25,13 +25,7 @@ function isGameLost(word, guesses) {
 }
 
 function countMistakes(word, guesses) {
-  return guesses.filter((guess) => {
-    if (!word.includes(guess)) {
-      return true; // this is letter is not guessed, count it
-    } else {
-      return false; // this letter was guessed, don't count it
-    }
-  }).length;
+  return guesses.filter((guess) => !word.includes(guess)).length;
 }
 
 module.exports = {
