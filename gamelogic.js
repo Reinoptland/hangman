@@ -32,6 +32,11 @@ function isGameWon(word, guesses) {
       return false;
     }
   }
+
+  // If we looped over all letters and we didn't find one
+  // letter that was not guessed (we return false if it does)
+  // that means all letters have been guessed!
+  return true;
 }
 
 function isGameLost(word, guesses) {
