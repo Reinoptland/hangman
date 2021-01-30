@@ -18,7 +18,7 @@ function displayWordSoFar(word, guesses) {
 }
 
 function isGameWon(word, guesses) {
-  // WRITE ME
+  console.log("INPUT", "WORD:", word, "GUESSES:", guesses);
 }
 
 function isGameLost(word, guesses) {

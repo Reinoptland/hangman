@@ -24,7 +24,7 @@ test("displayWordSoFar should display the letters guessed so far", () => {
   expect(displayedWord).toBe("_ a _ a _ _ _ i _ t ");
 });
 
-test("isGameWon should return false when all letters have not been guessed yet", () => {
+test.only("isGameWon should return false when all letters have not been guessed yet", () => {
   // ARRANGE
   const word = "javascript";
   const guesses = [];
