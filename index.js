@@ -1,4 +1,4 @@
-const { question } = require("readline-sync");
+const { keyIn } = require("readline-sync");
 const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
 
 function game(word, guesses) {
@@ -20,7 +20,14 @@ function game(word, guesses) {
     return;
   }
 
-  const letter = question("Raad een letter: ");
+  // using keyIn to get on letter,
+  // limit to limit the options of the user
+  // caseSensitive to only get lowercase letters
+  // check readline-sync docs for details
+  const letter = keyIn("Raad een letter: ", {
+    limit: "abcdefghijklmnopqrstuvwxyz",
+    caseSensitive: true,
+  });
 
   // voeg de geraden letter toe aan de array met guesses
   guesses.push(letter);

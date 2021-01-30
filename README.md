@@ -47,13 +47,13 @@ Je kan het programma stoppen door:
 
 ## BONUS DOELEN (kies zelf uit wat je het leukst vindt!)
 
-- [ ] Check of de gebruiker meer dan een letter tegelijk kiest
+- [x] Check of de gebruiker meer dan een letter tegelijk kiest
   - `a` mag wel
   - `ae` mag niet
 - [ ] Geef een foutmelding wanneer iemand meer dan een letter kiest
       OF
-- [ ] Maak het onmogelijk om meer dan een letter tegelijk in te voeren met
-- [ ] Zorg ervoor dat gekke gebruikers het spel niet verliezen door hoofdletters te gebruiken
+- [x] Maak het onmogelijk om meer dan een letter tegelijk in te voeren met
+- [x] Zorg ervoor dat gekke gebruikers het spel niet verliezen door hoofdletters te gebruiken
   - `A` gekozen? wordt: `a`
   - Is het woord `JavaScript`? wordt: `javascript`
 - [ ] Hou bij hoeveel fouten (letters die niet in woord zitten) iemand al heeft gemaakt
