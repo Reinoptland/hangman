@@ -8,13 +8,7 @@ function displayWordSoFar(word, guesses) {
 function isGameWon(word, guesses) {
   const letterNotGuessed = word
     .split("") // // ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"]
-    .find((letter) => {
-      if (!guesses.includes(letter)) {
-        return true; // we found a letter not guessed, stop looking
-      } else {
-        return false; // this letter was guessed, keep going
-      }
-    });
+    .find((letter) => !guesses.includes(letter));
 
   return letterNotGuessed === undefined; // if there is no letter not guessed, we won
 }
