@@ -1,20 +1,14 @@
 function displayWordSoFar(word, guesses) {
-  const lettersInWordArray = word.split("");
-
-  let output = "";
-  for (let index = 0; index < lettersInWordArray.length; index++) {
-    const letterInWord = lettersInWordArray[index];
-    const isLetterGuessed = guesses.includes(letterInWord);
-
-    if (!isLetterGuessed) {
-      output = output + "_ ";
-    }
-
-    if (isLetterGuessed) {
-      output = output + letterInWord + " ";
-    }
-  }
-  return output;
+  return word
+    .split("") // ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"]
+    .map((letter) => {
+      if (guesses.includes(letter)) {
+        return `${letter} `;
+      } else {
+        return "_ ";
+      }
+    }) // ["j ", "a ", "_ ", "a ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "]
+    .join(""); // "j a _ a _ _ _ _ _ _"
 }
 
 function isGameWon(word, guesses) {
