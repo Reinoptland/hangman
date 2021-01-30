@@ -1,4 +1,9 @@
-const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
+const {
+  displayWordSoFar,
+  isGameWon,
+  isGameLost,
+  countMistakes,
+} = require("./gamelogic");
 
 test("displayWordSoFar should display an underscore followed by a space for each letter to guess", () => {
   // ARRANGE
@@ -70,4 +75,15 @@ test("isGameLost should return false if you've guessed less than 7 wrong letters
 
   // ASSERT
   expect(gameLost).toBe(false);
+});
+
+test("countMistakes should count the number of mistakes a player has made", () => {
+  const word = "javascript";
+  const guesses = ["q", "w", "e", "a", "t"];
+
+  // ACT
+  const mistakeCount = countMistakes(word, guesses);
+
+  // ASSERT
+  expect(mistakeCount).toBe(3);
 });
