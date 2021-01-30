@@ -32,7 +32,9 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  // WRITE ME
+  console.log("INPUT", "WORD:", word, "GUESSES", guesses);
+  let mistakeCount = 0;
+  console.log("MISTAKE COUNT:", mistakeCount);
 }
 
 module.exports = {
