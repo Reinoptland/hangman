@@ -14,14 +14,8 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  const mistakeCount = countMistakes(word, guesses);
-
   const MAX_MISTAKE_COUNT = 7;
-  if (mistakeCount >= MAX_MISTAKE_COUNT) {
-    return true;
-  } else {
-    return false;
-  }
+  return countMistakes(word, guesses) >= MAX_MISTAKE_COUNT;
 }
 
 function countMistakes(word, guesses) {
