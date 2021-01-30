@@ -38,6 +38,8 @@ function isGameLost(word, guesses) {
   for (let index = 0; index < guesses.length; index++) {
     const guess = guesses[index];
     console.log("ONE GUESS IN LOOP:", guess);
+    const isGuessCorrect = word.includes(guess);
+    console.log("GUESS CORRECT?", word, guess, isGuessCorrect);
   }
 }
 
