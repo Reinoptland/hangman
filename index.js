@@ -13,6 +13,13 @@ function game(word, guesses) {
     return;
   }
 
+  const gameLost = isGameLost(word, guesses);
+  if (gameLost) {
+    console.log("YOU HAVE DIED...");
+    // returning to make the game function stop running
+    return;
+  }
+
   const letter = question("Raad een letter: ");
 
   // voeg de geraden letter toe aan de array met guesses
