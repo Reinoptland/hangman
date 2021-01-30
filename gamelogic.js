@@ -19,6 +19,8 @@ function displayWordSoFar(word, guesses) {
 
 function isGameWon(word, guesses) {
   console.log("INPUT", "WORD:", word, "GUESSES:", guesses);
+  const lettersInWordArray = word.split("");
+  console.log("LETTERS IN WORD:", lettersInWordArray);
 }
 
 function isGameLost(word, guesses) {
