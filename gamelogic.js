@@ -1,13 +1,7 @@
 function displayWordSoFar(word, guesses) {
   return word
     .split("") // ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"]
-    .map((letter) => {
-      if (guesses.includes(letter)) {
-        return `${letter} `;
-      } else {
-        return "_ ";
-      }
-    }) // ["j ", "a ", "_ ", "a ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "]
+    .map((letter) => (guesses.includes(letter) ? `${letter} ` : "_ ")) // ["j ", "a ", "_ ", "a ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "]
     .join(""); // "j a _ a _ _ _ _ _ _"
 }
 
