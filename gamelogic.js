@@ -26,6 +26,11 @@ function isGameWon(word, guesses) {
     console.log("ONE LETTER AT A TIME:", letterInWord);
     const letterGuessed = guesses.includes(letterInWord);
     console.log("IS THIS LETTER GUESSED?", letterInWord, letterGuessed);
+    if (!letterGuessed) {
+      // If there is one letter not guessed, you have not won
+      // So we can exit the loop an return if we find JUST one
+      return false;
+    }
   }
 }
 
