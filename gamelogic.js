@@ -24,6 +24,8 @@ function isGameWon(word, guesses) {
   for (let index = 0; index < lettersInWordArray.length; index++) {
     const letterInWord = lettersInWordArray[index];
     console.log("ONE LETTER AT A TIME:", letterInWord);
+    const letterGuessed = guesses.includes(letterInWord);
+    console.log("IS THIS LETTER GUESSED?", letterInWord, letterGuessed);
   }
 }
 
